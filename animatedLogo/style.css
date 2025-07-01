@@ -1,0 +1,92 @@
+
+/* Initial state for content */
+
+
+/* Rest of your existing styles */
+
+#app {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-4);
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+h1 {
+  margin-bottom: var(--space-3);
+}
+
+p {
+  margin-bottom: var(--space-3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.logo11{
+  background-image: url('oclogo.jpg');
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.button {
+  border-radius: var(--space-1);
+  border: none;
+  padding: var(--space-1) var(--space-3);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.button:hover {
+  background-color: var(--primary-light);
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #1d1d1f;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  
+  #app {
+    padding: var(--space-3);
+  }
+}
