@@ -1,0 +1,259 @@
+/* Tablet Styles */
+@media screen and (max-width: 2500px){
+    #discoverBTN{
+        width: 240px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .year-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .stat .number {
+        font-size: 2rem;
+    }
+    #hero-video {
+        top: 32%;
+        left: 0;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .video-container {
+        padding: 20px;
+    }
+    
+    .video-wrapper {
+        border: 3px solid rgb(236, 202, 6);
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--maroon);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .year-container {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tuition-container {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #discoverBTN{
+        max-width: 90%;
+        bottom: -100px;
+        position: relative;
+        font-size: 10px;
+        box-shadow: 0px 5px 15px black;
+    }
+    .year-container {
+        padding: 6px;
+    }
+    .year li {
+        font-size: 6px;
+        font-family: monospace;
+    }
+    .year {
+        border: 2px solid black;
+    }
+    .title {
+        font-size: 24px;
+    }
+    
+    .semester {
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 2px 12px 12px black;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 18px;
+    }
+    .hero-content {
+        width: 95%;
+        padding: 1rem;
+        top: 80%;
+    }
+
+    .stat .number {
+        font-size: 1.8rem;
+    }
+
+    .feature, .year, .tuition-card, .tuition-info {
+        padding: 1.5rem;
+        box-shadow: 3px 15px 15px black;
+        border: 2px solid maroon;
+    }
+
+    .faculty-member img {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-family: auto;
+    }
+
+    .feature p{
+        font-size: 8px;
+        font-family: emoji;
+        margin-top: 25px;
+    }
+
+    .price {
+        font-size: 35px;
+        font-family: none;
+    }
+    .logo{
+        font-size: 9px;
+        margin-left: -12px;
+    }
+    #hero-video{
+        object-fit: contain;
+        bottom: 200px;
+    }
+    .gallery h2{
+        font-size: 20px;
+        font-style: none;
+    }
+
+    .oc-logo{
+        opacity: 1;
+        top: 6%;
+        left: 22.5%;
+        background-color: transparent;
+    }
+
+    .oc-logo p{
+        bottom: 48px;
+        color: gold;
+    }
+    .block{
+        width: 45%;
+        box-shadow: 0px 0px 17px yellow;
+        padding: 47px;
+    }
+    #discoverBTN{
+        opacity: 1;
+        bottom: 74px;
+        padding: 13px;
+        box-shadow: 0px 0px 8px white;
+        width: 500px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 1000px;
+        width:100%;
+    }
+    .semester h4{
+        font-size: 10px;
+    }
+    .year h3{
+        font-size: 10px;
+        font-family: 'Bookman Old Style';
+    }
+    #violetaName, #jovName{
+        font-size: 16px;
+    }
+    .carousel-wrapper{
+        margin-left: 0px;
+    }
+    #img03, #img02,#img04, #img05, #img01{
+        max-width: 94%;
+        height: 50%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
