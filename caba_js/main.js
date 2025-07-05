@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile Navigation Toggle
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburger.classList.toggle("active");
     });
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Navigation elements not found!");
   }
 
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
