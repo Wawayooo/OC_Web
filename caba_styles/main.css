@@ -1,0 +1,528 @@
+:root {
+    --maroon: #800020;
+    --golden: #FFD700;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #333333;
+    --light-maroon: #a06060;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--maroon);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: var(--golden);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--golden);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-content {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+    width: 500px;
+}
+
+#discoverBTN{
+    box-shadow: 0px 5px 15px rgb(205, 235, 8);
+    border: solid 3px black;
+    width: 500px;
+    font-size: 25px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.hero h1 {
+    opacity: 0;
+}
+
+.hero p {
+    opacity: 0;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    position: absolute;
+    opacity: 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--golden);
+    display: block;
+}
+
+.stat .label {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--golden);
+    color: var(--maroon);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.features {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.feature {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+/* Curriculum Section */
+.curriculum {
+    padding: 5rem 2rem;
+    background-color: var(--maroon);
+    color: var(--white);
+}
+
+.year-container {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    box-shadow: 3px 6px 9px black;
+    border: 2px solid var(--golden);
+    border-radius: 10px;
+}
+
+.year {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    margin: 2%;
+}
+
+.semester {
+    margin-top: 1.5rem;
+}
+
+.semester h4 {
+    color: var(--golden);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+/* General Container Styling */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a1a1a, #660000);
+}
+
+/* Main Content */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Title */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border: 4px solid rgb(236, 202, 6);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* Video Element */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+.semester li{
+    font-family: 'Old Man Bookstyle';
+    font-size: 15px;
+}
+
+.year ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+
+.year li {
+    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
+}
+
+/* Faculty Section */
+.faculty {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faculty-member {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 5px 15px maroon;
+    transition: transform 0.3s;
+    border: 2px solid gold;
+}
+
+.faculty-member:hover {
+    transform: translateY(-5px);
+}
+
+.faculty-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--maroon);
+}
+
+.faculty-member h3 {
+    color: var(--maroon);
+    margin-bottom: 0.5rem;
+}
+
+.faculty-member p {
+    color: var(--gray);
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 3px 5px 25px black;
+    border: 2px solid maroon;
+}
+
+.block{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 2px 8px 17px maroon; 
+    background-color: white;
+    border: 2px solid gold;
+    bottom: -23%;
+    position: relative;
+}
+
+.oc-logo{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    flex-direction: column;
+    border-radius: 20%;
+    opacity: 0;
+}
+
+#OCLogo{
+    width: 49%;
+    height: 49%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    bottom: 26%;
+    position: relative;
+}
+
+.oc-logo p{
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 34px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Tuition Section */
+.tuition {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.tuition-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tuition-card {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    font-size: 3rem;
+    color: var(--golden);
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+
+.tuition-info {
+    padding: 2.5rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tuition-info ul, .tuition-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.tuition-info li, .tuition-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tuition-info li:before {
+    content: "•";
+    color: var(--maroon);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.tuition-card li:before {
+    content: "•";
+    color: var(--golden);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Common Styles */
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--maroon);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--golden);
+}
+
+.curriculum h2 {
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--maroon);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-links li {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+.nav-links li::before {
+  content: "📊"; 
+  position: absolute;
+  left: 0;
+}
+
+.year
